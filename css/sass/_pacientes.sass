@@ -1,5 +1,6 @@
 .listPaciente
-    background: #d3d3d3c9
+    background: url('../img/cross/checkerboard-cross.png')    
+    background-repeat: repeat
     width: 100%
     min-height: 76.5vh
     padding: 30px 0
@@ -8,6 +9,12 @@
         width: 95%
         margin: auto
         overflow: hidden
+        .agregar-paciente
+            width: 100%
+            background: #e94949
+            .nuevo
+                left: 0px
+                top: 0px
         .listado-paciente
             position: relative
             display: flex
@@ -20,5 +27,17 @@
                 width: 20%
                 padding: 28px 0px
                 margin: 15px 25px
+                font-weight: 500
                 -webkit-box-shadow: 15px 15px 15px 0px rgba(0, 0, 0, 0.35)
                 box-shadow: 15px 15px 15px 0px rgba(0, 0, 0, 0.25)
+                .detalle 
+                    margin: auto
+                    background: #3895ea
+                    color: #fff
+                    border: none
+                    border-radius: 100px
+                    padding: 10px 40px
+                    cursor: pointer
+                    outline: none
+                    &:hover 
+                        background: #0060fb

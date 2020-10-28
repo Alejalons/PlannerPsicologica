@@ -22,7 +22,7 @@
                 </div>                
                 <div class="contenedor">
                     <div class="item">
-                        <a href="#" id="btn-listarPacientes">Pacientes</a>
+                        <a href="index.html" id="btn-listarPacientes">Pacientes</a>
                         <a href="#" id="btn-listarPacientes">Lorem</a>
                         <a href="#" id="btn-listarPacientes">Lorem</a> 
                         <a href="#" id="btn-listarPacientes">Lorem</a>
@@ -32,8 +32,8 @@
             </div>
         </nav>             
     </header>
-    <input type="checkbox" id="btn-chkMenu"> 
 
+    <input type="checkbox" id="btn-chkMenu"> 
     <div class="container-menu">
         <div class="panelMenu">
             <label for="btn-chkMenu" class="far fa-times-circle equis"></label>
@@ -43,128 +43,34 @@
                 <a href="#" id="btn-listarPacientes">Lorem</a> 
                 <a href="#" id="btn-listarPacientes">Lorem</a>
                 <a href="#" id="btn-listarPacientes">Lorem</a> 
-            </nav>
-            
+            </nav>            
         </div>
     </div>
 
     <section class="main">
         <section class="listPaciente" id="listPaciente">
             <div class="contenedor-paciente">
-                <div class="listado-paciente">
-                    <div class="paciente">
-                        <div class="descripcion">
-                            <h4 class="nombre">Lorem ipsum dolor</h3>
-                            <p class="parrafo">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                    <div class="paciente">
-                        <div class="descripcion">
-                            <h4 class="nombre">Lorem ipsum dolor</h3>
-                            <p class="parrafo">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                    <div class="paciente">
-                        <div class="descripcion">
-                            <h4 class="nombre">Lorem ipsum dolor</h3>
-                            <p class="parrafo">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                    <div class="paciente">
-                        <div class="descripcion">
-                            <h4 class="nombre">Lorem ipsum dolor</h3>
-                            <p class="parrafo">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                    <div class="paciente">
-                        <div class="descripcion">
-                            <h4 class="nombre">Lorem ipsum dolor</h3>
-                            <p class="parrafo">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                    <div class="paciente">
-                        <div class="descripcion">
-                            <h4 class="nombre">Lorem ipsum dolor</h3>
-                            <p class="parrafo">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                    <div class="paciente">
-                        <div class="descripcion">
-                            <h4 class="nombre">Lorem ipsum dolor</h3>
-                            <p class="parrafo">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                    <div class="paciente">
-                        <div class="descripcion">
-                            <h4 class="nombre">Lorem ipsum dolor</h3>
-                            <p class="parrafo">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                    <div class="paciente">
-                        <div class="descripcion">
-                            <h4 class="nombre">Lorem ipsum dolor</h3>
-                            <p class="parrafo">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                    <div class="paciente">
-                        <div class="descripcion">
-                            <h4 class="nombre">Lorem ipsum dolor</h3>
-                            <p class="parrafo">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                    <div class="paciente">
-                        <div class="descripcion">
-                            <h4 class="nombre">Lorem ipsum dolor</h3>
-                            <p class="parrafo">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                    <div class="paciente">
-                        <div class="descripcion">
-                            <h4 class="nombre">Lorem ipsum dolor</h3>
-                            <p class="parrafo">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                    <div class="paciente">
-                        <div class="descripcion">
-                            <h4 class="nombre">Lorem ipsum dolor</h3>
-                            <p class="parrafo">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                    <div class="paciente">
-                        <div class="descripcion">
-                            <h4 class="nombre">Lorem ipsum dolor</h3>
-                            <p class="parrafo">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                    <div class="paciente">
-                        <div class="descripcion">
-                            <h4 class="nombre">Lorem ipsum dolor</h3>
-                            <p class="parrafo">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-
-
+                <div class="agregar-paciente">
+                    <button class="nuevo">Agregar Nuevo Paciente</button>
+                </div>
+                <div class="listado-paciente" id="listado-paciente"> 
                 </div>
             </div>
         </section>
     </section>
 
+    
     <footer>
         <div class="contenedor-footer">
             <div class="copyright">
                 <p>&copy;Copyright Planner Digital Psicológico</p>
             </div>
-            <div class="otros">
-                <nav class="menu">
-                    <a href="#" id="btn-listarPacientes">Pacientes</a>
-                    <a href="#" id="btn-listarPacientes">Lorem</a>
-                    <a href="#" id="btn-listarPacientes">Lorem</a> 
-                    <a href="#" id="btn-listarPacientes">Lorem</a>
-                    <a href="#" id="btn-listarPacientes">Lorem</a>
-                </nav>
-            </div>
         </div>
-    </footer>
+    </footer>    	
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/list_paciente.js"></script>
     <script src="https://kit.fontawesome.com/f8a4c1883d.js" crossorigin="anonymous"></script>
 </body>
 </html>
