@@ -1,0 +1,160 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px; }
+
+.contenedor {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden; }
+
+header .menu {
+  width: 100%;
+  background: #ffffff7e;
+  text-align: center;
+  border-bottom: 1px ridge black; }
+  header .menu .contenedor-header {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    header .menu .contenedor-header .logo {
+      margin: 10px 50px; }
+      header .menu .contenedor-header .logo img {
+        height: 110px;
+        width: 110px; }
+    header .menu .contenedor-header .btnPanel label {
+      left: 0;
+      top: 0;
+      margin: 5px 5px;
+      font-size: 35px;
+      display: none; }
+    header .menu .contenedor-header .item a {
+      color: #000;
+      font-size: 25px;
+      font-weight: 400;
+      display: inline-block;
+      margin: 30px 30px;
+      text-decoration: none; }
+
+#btn-chkMenu {
+  display: none; }
+
+.container-menu {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  transition: all 500ms ease;
+  opacity: 0;
+  visibility: hidden; }
+  .container-menu .panelMenu {
+    width: 100%;
+    max-width: 350px;
+    background: #32323a;
+    height: 100vh;
+    position: absolute;
+    transition: all 500ms ease;
+    transform: translateX(-100%); }
+    .container-menu .panelMenu nav a {
+      width: 100%;
+      color: #ffffff;
+      font-size: 25px;
+      font-weight: 400;
+      display: block;
+      margin: 30px 30px;
+      text-decoration: none; }
+    .container-menu .panelMenu .equis {
+      position: absolute;
+      color: #fff;
+      font-size: 25px;
+      margin-left: 90%;
+      margin-top: 2%;
+      cursor: pointer; }
+
+#btn-chkMenu:checked ~ .container-menu {
+  opacity: 1;
+  visibility: visible; }
+
+#btn-chkMenu:checked ~ .container-menu .panelMenu {
+  transform: translateX(0%); }
+
+.listPaciente {
+  background: #d3d3d3c9;
+  width: 100%;
+  min-height: 76.5vh;
+  padding: 30px 0;
+  border-bottom: 1px ridge black; }
+  .listPaciente .contenedor-paciente {
+    width: 95%;
+    margin: auto;
+    overflow: hidden; }
+    .listPaciente .contenedor-paciente .listado-paciente {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center; }
+      .listPaciente .contenedor-paciente .listado-paciente .paciente {
+        background: #ffffff;
+        text-align: center;
+        width: 20%;
+        padding: 28px 0px;
+        margin: 15px 25px;
+        -webkit-box-shadow: 15px 15px 15px 0px rgba(0, 0, 0, 0.35);
+        box-shadow: 15px 15px 15px 0px rgba(0, 0, 0, 0.25); }
+
+footer {
+  align-self: flex-end;
+  left: 0px;
+  bottom: 0px;
+  height: 15px;
+  width: 100%; }
+  footer .contenedor-footer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    footer .contenedor-footer .copyright {
+      margin: 10px 10px; }
+      footer .contenedor-footer .copyright p {
+        text-align: left; }
+    footer .contenedor-footer .otros a {
+      color: #000;
+      font-size: 25px;
+      font-weight: 400;
+      display: inline-block;
+      margin: 30px 10px;
+      text-decoration: none;
+      position: relative; }
+
+@media screen and (max-width: 1211px) {
+  header .menu .logo {
+    width: 90%; } }
+@media screen and (max-width: 1068px) {
+  .listPaciente .contenedor-paciente .listado-paciente .paciente {
+    width: 25%; } }
+@media screen and (max-width: 882px) {
+  .listPaciente .contenedor-paciente .listado-paciente .paciente {
+    width: 40%; } }
+@media screen and (max-width: 756px) {
+  header .menu .contenedor-header .btnPanel label {
+    position: fixed;
+    display: inline-block; }
+  header .menu .contenedor-header .item {
+    display: none; } }
+@media screen and (max-width: 629px) {
+  .listPaciente .contenedor-paciente .listado-paciente .paciente {
+    width: 75%; } }
+
+/*# sourceMappingURL=estilos.css.map */
