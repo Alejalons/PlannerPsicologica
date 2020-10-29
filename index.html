@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/estilos.css">
     <title>Planner Psicológico</title>
-
 </head>
 <body>
     <header>  
@@ -52,8 +51,9 @@
             <div class="agregar-paciente">
                 <button class="nuevo">Nuevo Paciente</button>
             </div>
-            <div class="contenedor-paciente">                
-                <div class="listado-paciente" id="listado-paciente"> 
+            <div id="wrapper" class="contenedor-paciente">                
+                <div class="contents listado-paciente" id="listado-paciente"> 
+                      
                 </div>
             </div>
         </section>
@@ -71,6 +71,10 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>    
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="js/list_paciente.js"></script>
+    <script src="js/pagination.js"></script>
     <script src="https://kit.fontawesome.com/f8a4c1883d.js" crossorigin="anonymous"></script>
+    
+   
+    
 </body>
 </html>

@@ -52,5 +52,16 @@ $(document).ready(function(){
             list_btn.appendChild(fragment_btn)
         }
 
+        //ordena los valores entregados por cada 8 items
+        $("#tab").pagination({
+            items: 8,
+            contents: 'contents',
+            previous: 'Anterior',
+            next: 'Siguiente',
+            position: 'bottom',
+        });
+
     }).catch(err => console.log(err))
+
+   
 });
