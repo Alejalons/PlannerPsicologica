@@ -6,13 +6,88 @@
     <title>Document</title>
 </head>
 <body>
-    
 
-    <button id = "button">submit</button>
-    <ul id = "list"></ul>
+    <div>
+        <input type="text" class="fltr-controls" name="filtr-search" placeholder="Your search" data-search>
+    </div>
+   
+    <div  class="filter-container">
+        <div class="hola roja filtr-item"  data-category="5" data-sort="value" data-author="q">
+            <p class="filtr-title">Chile</p>
+        </div>
+        <div class="hola azul filtr-item" data-category="5" data-sort="value" data-author="q">
+            <p class="filtr-title">colombia</p>
+        </div>
+        <div class="hola verde filtr-item" data-category="5" data-sort="value" data-author="q">
+            <p class="filtr-title">argentina</p>
+        </div>
+        <div class="hola a filtr-item" data-category="5" data-sort="value" data-author="q">
+            <p class="filtr-title">peru</p>
+        </div>
+        <div class="hola b filtr-item" data-category="5" data-sort="value" data-author="q">
+            <p class="filtr-title">bolivia</p>
+        </div>
+        <div class="hola c filtr-item" data-category="5" data-sort="value" data-author="q">
+            <p class="filtr-title">paraguay</p>
+        </div>
+        <div class="hola d filtr-item"  data-category="5" data-sort="value" data-author="q">
+            <p class="filtr-title">venezuela</p>
+        </div>
+        <div class="hola e filtr-item" data-category="5" data-sort="value" data-author="q">
+            <p class="filtr-title">ecuador</p>
+        </div>
+        <div class="hola f filtr-item" data-category="5" data-sort="value" data-author="q">
+            <p class="filtr-title">mexico</p>
+        </div>
+    </div>
+
+    <style>
+        .hola {
+            width: 100%;            
+        }
+        .roja {
+            background: red;
+        }
+        .azul {
+            background: blue;
+        }
+        .verde {
+            background: green;
+        }
+        .a {
+            background: rgb(96, 97, 175);
+        }
+        .b {
+            background: rgb(165, 53, 137);           
+        }
+        .c {
+            background: rgb(76, 163, 58);
+        }
+        .d {
+            background: rgb(197, 162, 65);
+        }
+        .e {
+            background: rgb(153, 176, 206);
+        }
+        .f {
+            background: rgb(87, 14, 65);
+        }
+    </style>
 
 
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>    
+    <script src="js/filterizr/jquery.filterizr.min.js"></script>
+
+
+    <script >
+        const filterizr = $('.filter-container').filterizr({
+                controlsSelector: '.fltr-controls',
+                gridItemsSelector: '.filtr-item',
+                spinner: {
+                    enabled: true,
+                },
+            });
+    </script>
+   
 </body>
 </html>

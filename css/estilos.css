@@ -95,48 +95,72 @@ header .menu {
   min-height: 76.5vh;
   padding: 30px 0;
   border-bottom: 1px ridge black; }
-  .listPaciente .agregar-paciente {
+  .listPaciente .panel-top {
     width: 100%; }
-    .listPaciente .agregar-paciente .nuevo {
-      float: right;
-      background: #00e9c4;
-      color: #fff;
-      border: none;
-      border-radius: 100px;
-      padding: 10px 40px;
-      font-weight: 700;
-      cursor: pointer;
-      outline: none; }
-  .listPaciente .contenedor-paciente {
-    width: 95%;
-    margin: auto;
-    overflow: hidden; }
-    .listPaciente .contenedor-paciente .listado-paciente {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 35px; }
-      .listPaciente .contenedor-paciente .listado-paciente .paciente {
-        background: #ffffff;
+    .listPaciente .panel-top .agregar-paciente {
+      float: right; }
+      .listPaciente .panel-top .agregar-paciente .nuevo {
+        background: #00e9c4;
+        color: #fff;
+        border: none;
+        border-radius: 100px;
+        padding: 10px 40px;
+        font-weight: 700;
+        cursor: pointer;
+        outline: none; }
+    .listPaciente .panel-top .busqueda {
+      float: left;
+      width: 300px;
+      margin-left: 20px; }
+      .listPaciente .panel-top .busqueda .fltr-controls {
+        border-radius: 100px;
+        padding: 5px 5px;
         text-align: center;
-        width: 20%;
-        padding: 28px 0px;
-        margin: 15px 25px;
-        font-weight: 500;
-        -webkit-box-shadow: 15px 15px 15px 0px rgba(0, 0, 0, 0.35);
-        box-shadow: 15px 15px 15px 0px rgba(0, 0, 0, 0.25); }
-        .listPaciente .contenedor-paciente .listado-paciente .paciente .detalle {
-          margin: auto;
-          background: #3895ea;
-          color: #fff;
-          border: none;
-          border-radius: 100px;
-          padding: 10px 40px;
-          cursor: pointer;
-          outline: none; }
-          .listPaciente .contenedor-paciente .listado-paciente .paciente .detalle:hover {
-            background: #0060fb; }
+        font-weight: 700;
+        outline: none; }
+      .listPaciente .panel-top .busqueda .cancel {
+        z-index: 4;
+        margin-left: 210px;
+        position: absolute;
+        margin-top: 7px;
+        cursor: pointer; }
+      .listPaciente .panel-top .busqueda .search {
+        z-index: 3;
+        margin-left: 20px;
+        margin-top: 9px;
+        cursor: pointer;
+        position: absolute; }
+
+.contenedor-paciente {
+  width: 95%;
+  margin: auto;
+  overflow: hidden; }
+  .contenedor-paciente .listado-paciente {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 35px; }
+    .contenedor-paciente .listado-paciente .paciente {
+      background: #ececec;
+      text-align: center;
+      width: 20%;
+      padding: 28px 0px;
+      margin: 15px 25px;
+      font-weight: 500;
+      -webkit-box-shadow: 15px 15px 15px 0px rgba(0, 0, 0, 0.35);
+      box-shadow: 15px 15px 15px 0px rgba(0, 0, 0, 0.25); }
+      .contenedor-paciente .listado-paciente .paciente .detalle {
+        margin: auto;
+        background: #3895ea;
+        color: #fff;
+        border: none;
+        border-radius: 100px;
+        padding: 10px 40px;
+        cursor: pointer;
+        outline: none; }
+        .contenedor-paciente .listado-paciente .paciente .detalle:hover {
+          background: #0060fb; }
 
 #page-navi {
   width: 50%;
@@ -211,5 +235,25 @@ footer {
 @media screen and (max-width: 629px) {
   .listPaciente .contenedor-paciente .listado-paciente .paciente {
     width: 75%; } }
+@media screen and (max-width: 544px) {
+  .listPaciente .panel-top .agregar-paciente {
+    float: none;
+    margin-left: 30%; }
+  .listPaciente .panel-top .busqueda {
+    float: none;
+    width: 300px;
+    margin-left: 30%;
+    margin-bottom: 20px; } }
+@media screen and (max-width: 416px) {
+  .listPaciente .panel-top .agregar-paciente {
+    margin-left: 15%; }
+  .listPaciente .panel-top .busqueda {
+    margin-left: 15%; } }
+@media screen and (max-width: 342px) {
+  .listPaciente .panel-top .agregar-paciente {
+    float: none;
+    margin-left: 20%; }
+  .listPaciente .panel-top .busqueda {
+    margin-left: 2%; } }
 
 /*# sourceMappingURL=estilos.css.map */
