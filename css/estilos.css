@@ -228,7 +228,7 @@ footer {
     width: 40%; } }
 @media screen and (max-width: 756px) {
   header .menu .contenedor-header .btnPanel label {
-    position: fixed;
+    position: absolute;
     display: inline-block; }
   header .menu .contenedor-header .item {
     display: none; } }

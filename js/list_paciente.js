@@ -1,23 +1,23 @@
 $(document).ready(function(){
     axios({
         url: 'https://rickandmortyapi.com/api/character/',
+        // url: 'https://consultapsico.herokuapp.com/pacientes',
         method: 'get'
     }).then(res => {
 
-        //selecciona div creado en html
-        const list = document.getElementById('listado-paciente')
-        //instancia
-        const fragment = document.createDocumentFragment()
-        
+     
+        console.log(res.data.results);
         //recorre valores de objeto entregado por la url
         for (let value of  res.data.results ){
             
             //crea div contenedor paciente
+            //selecciona div creado en html
+            const list = document.getElementById('listado-paciente')
+            const fragment = document.createDocumentFragment()
             const listItem = document.createElement('div');
             listItem.className = "paciente filtr-title "+`${value.name.toUpperCase()}`
             listItem.setAttribute('data-category' , '5')
             listItem.setAttribute('data-filtr' , `${value.name }`)
-
             listItem.id = `${value.id }`
 
             fragment.appendChild(listItem) 
@@ -27,9 +27,7 @@ $(document).ready(function(){
             const listH4 = document.getElementById(`${value.id }`)
             const fragmentH4 = document.createDocumentFragment()
             const listItemH4 = document.createElement('h4');
-            // listItemH4.className = "nombre filtr-title"
             listItemH4.className = "nombre"
-            // listItemH4.setAttribute('data-filtr' , `${value.name }`)
             listItemH4.textContent = `${value.name }`
             
             fragmentH4.appendChild(listItemH4) 
@@ -40,7 +38,6 @@ $(document).ready(function(){
             const fragment_p = document.createDocumentFragment()
             const listItem_p = document.createElement('p');
             listItem_p.className = "parrafo"
-            // listItem_p.setAttribute('data-filtr' , `${value.name }`)
             listItem_p.textContent = `${value.status }`
             
             fragment_p.appendChild(listItem_p) 
@@ -51,7 +48,6 @@ $(document).ready(function(){
             const fragment_btn = document.createDocumentFragment()
             const listItem_btn = document.createElement('button');
             listItem_btn.className = "detalle"
-            // listItem_btn.setAttribute('data-filtr' , `${value.name }`)
             listItem_btn.textContent = "Detalle"
             listItem_btn.value = `${value.id }`
             
@@ -59,10 +55,6 @@ $(document).ready(function(){
             list_btn.appendChild(fragment_btn)
         }
 
-        // document.getElementById("InputSearch").onchange = function() {myFunction()};
-        // function myFunction(){
-        //     console.log("hola");
-        // }
         //ordena los valores entregados por cada X items
         $("#tab").pagination({
             items: 8,
@@ -71,37 +63,16 @@ $(document).ready(function(){
             next: 'Siguiente',
             position: 'bottom',
         });
-        // $("#fltr-controls").c
-        
-
-        //$('input[name="filtr_input"]').filtr($('#wrapper .filtr-title'));   
-        // $('input[name="filtr_input"]').filtr($('.filter-list .filtr-title'));   
-
-        
-
-        // document.getElementById("fltr-controls").onchange = function() {myFunction()};
-        // function myFunction(){
-        //     var value  = document.getElementById("fltr-controls").value;
-        //     console.log(value.toUpperCase());
-
-        //     $(".paciente").css("display", "none");            
-        //     $("."+value.toUpperCase()).css("display", "block");
-        //     // $(".hola").css("display", "block");
-        // }
-     
 
     }).catch(err => console.log(err))
-
-    // $(function()
-    // {
-      
-    // });
-
 });
 
+//cuando alla un cambio en el input de buscqueda se ejecuta este codigo
 function search() {
     $('input[name="filtr_input"]').filtr($('.filter-list .filtr-title'));
 }
+
+// al presionar la equis en el buscador, limpia el buscador y ordena nuevamente por x items
 function cancel(){
     $('#InputSearch').val('');
     $("#tab").pagination({
